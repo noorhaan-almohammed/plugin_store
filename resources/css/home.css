@@ -1,0 +1,110 @@
+.page {
+    margin: 7% 10%;
+    padding: 1px 0px;
+    background-color: #ffffff52;
+}
+    .description {
+        font-size: 20px;
+        margin-left: 20px;
+        
+    }
+    .card .img img {
+        width: 900px;
+    }
+    h1,h2,h3,h4 {
+        color: #4dc4d5;
+    }
+    .item1 { grid-area: img; }
+    .item2 { grid-area: descript; }
+    .item3 { grid-area: features; }
+    .item4 {
+        grid-area: auther;
+        margin-bottom: 40px;
+        display: grid;
+        grid-template-columns: auto auto;
+        text-align: center;
+        width: 100%;
+        background-color: #faffff;
+        padding-bottom: 15px;
+        box-shadow: 0px 0px 25px #4dc4d5;
+    }
+    .item6 { grid-area: down; 
+    padding: 10px;}
+   
+    .card {
+        margin-left: 20px;
+        margin-bottom: 100px;
+        width: 60%;
+        display: grid;
+        grid-template-areas: 'img img' 'descript descript' 'features features' 'auther auther' 'down down'
+    }
+    .item2 p {
+        font-size: 18px;
+        color: #5f6d72;
+    }
+    date , price , .link_down a{
+            font-weight: bold;
+            color: #5f6d72;
+            font-size: 19px;
+            text-decoration: none;
+    }
+ 
+    .li-feat {
+        color: #334f58;
+        line-height: 30px;
+    }
+    span#feature_id {
+        color: #7ad8ddd1;
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    .down-btn button {
+        width: 100%;
+        height: 50px;
+        font-size: 33px;
+        font-family: inherit;
+        font-weight: bold;
+        z-index: 2;
+        background: black;
+        color: #4ac3d3;
+        border: none;
+    }
+    .down-btn{
+        position: relative;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+      
+    }
+    .down-btn::before {
+        content: '';
+        position: absolute;
+        background-image: conic-gradient(transparent,transparent,#4ac3d3,transparent,transparent);
+        animation: animat 25s ease-in-out infinite;
+        width: 1000px;
+        height: 1000px;  
+        z-index: 1;
+        border-radius: 50%;
+    }
+    .down-btn::after{
+        content: '';
+        position: absolute;
+        background-image: conic-gradient(transparent,#4ac3d3,transparent);
+        animation: animat 40s ease-in-out infinite;
+        transition-delay: 3s;
+        width: 1000px;
+        height: 1000px; 
+        z-index: 1;
+        border-radius: 50%;
+    }
+    @keyframes animat{
+        0%{
+            transform: rotate(0deg);
+        }
+        100%{
+            transform: rotate(360deg);
+        }
+    }
